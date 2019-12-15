@@ -1,7 +1,9 @@
 import React from "react";
-
+import  UserProfile from './components/UserProfile/UserProfile'
 function App() {
-  return <span>React awesome!!!!!!!!</span>;
+  return (<>
+  <UserProfile/>
+  </>)
 }
 
 export default App;
