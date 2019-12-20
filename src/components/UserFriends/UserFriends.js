@@ -1,13 +1,17 @@
-/* eslint-disable*/
 import React from "react";
+import PropTypes from "prop-types";
 import style from "./UserFriends.module.css";
 
 const UserFriend = ({ friends }) => {
   return (
-    <ul className={style.friend_нlist}>
+    <ul className={style.friend_list}>
       {friends.map(el => (
         <li key={el.id} className={style.item}>
-          <span className="status" />
+          {el.isOnline ? (
+            <span className={style.active} />
+          ) : (
+            <span className={style.inActive} />
+          )}
           <img
             className={style.avatar}
             src={el.avatar}
@@ -21,4 +25,14 @@ const UserFriend = ({ friends }) => {
   );
 };
 
+UserFriend.propTypes = {
+  friends: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+      isOnline: PropTypes.bool.isRequired,
+      avatar: PropTypes.string.isRequired
+    })
+  ).isRequired
+};
 export default UserFriend;

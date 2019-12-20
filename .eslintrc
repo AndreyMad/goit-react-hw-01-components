@@ -1,7 +1,6 @@
 {
   "extends": [
     "eslint:recommended",
-    "react-app",
     "airbnb",
     "plugin:import/errors",
     "plugin:react/recommended",
@@ -62,4 +61,3 @@
     "navigator": true
   }
 }
-
