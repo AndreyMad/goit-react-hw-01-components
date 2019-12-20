@@ -1,39 +1,34 @@
-import React from 'react';
+/* eslint-disable*/
+import React from "react";
 // import PropTypes from 'prop-types';
-import style from './UserProfile.module.css';
+import style from "./UserProfile.module.css";
 
-const Profile = ({user})=>(
-<div className={style.profile}>
-  <div className={style.description}>
-    <img
-      src="https://i.pinimg.com/originals/a0/40/66/a04066a2d1fcf25df39c599e093995c8.jpg"
-      alt="user avatar"
-      className={style.avatar}
-    />
-    <p className="name">Petra Marica</p>
-    <p className="tag">@pmarica</p>
-    <p className="location">Salvador, Brasil</p>
-  </div>
+const Profile = ({ user }) => {
+  return (
+    <div className={style.profile}>
+      <div className={style.description}>
+        <img src={user.avatar} alt="user avatar" className={style.avatar} />
+        <p className={style.name}>{user.name}</p>
+        <p className={style.tag}>{`@ ${user.tag}`}</p>
+        <p className={style.location}>{user.location}</p>
+      </div>
 
-  <ul className="stats">
-    <li>
-      <span className="label">Followers</span>
-      <span className="quantity">1000</span>
-    </li>
-    <li>
-      <span className="label">Views</span>
-      <span className="quantity">2000</span>
-    </li>
-    <li>
-      <span className="label">Likes</span>
-      <span className="quantity">3000</span>
-    </li>
-  </ul>
-</div>
-)
-
-
+      <ul className={style.stats}>
+        <li>
+          <span className={style.label}>Followers</span>
+          <span className={style.quantity}>{user.stats.followers}</span>
+        </li>
+        <li>
+          <span className={style.label}>Views</span>
+          <span className={style.quantity}>{user.stats.views}</span>
+        </li>
+        <li>
+          <span className={style.label}>Likes</span>
+          <span className={style.quantity}>{user.stats.likes}</span>
+        </li>
+      </ul>
+    </div>
+  );
+};
+// Profile.propTypes = {};
 export default Profile;
-
-
-
