@@ -1,0 +1,33 @@
+.transactionHistory {
+  width: 400px;
+  margin: 20px auto;
+  border-radius: 5px;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: -4px 6px 11px 0px rgba(0, 0, 0, 0.75);
+}
+
+.table_head {
+  width: 400px;
+  background-color: #00bcd5;
+  height: 40px;
+}
+.table_head > th,
+.tableRow > td {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.tableRow {
+  text-align: center;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.firstLetterToUpercase::first-letter {
+  text-transform: uppercase;
+}
+.tableRow:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.tableRow:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}

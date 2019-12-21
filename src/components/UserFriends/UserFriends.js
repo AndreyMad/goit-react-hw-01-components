@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import style from './UserFriends.module.css';
+import React from "react";
+import PropTypes from "prop-types";
+import style from "./UserFriends.module.css";
 
 const UserFriend = ({ friends }) => {
   return (
@@ -31,8 +31,8 @@ UserFriend.propTypes = {
       id: PropTypes.number.isRequired,
       name: PropTypes.string.isRequired,
       isOnline: PropTypes.bool.isRequired,
-      avatar: PropTypes.string.isRequired,
-    }),
-  ).isRequired,
+      avatar: PropTypes.string.isRequired
+    })
+  ).isRequired
 };
 export default UserFriend;

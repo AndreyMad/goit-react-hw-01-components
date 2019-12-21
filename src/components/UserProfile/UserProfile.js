@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import style from './UserProfile.module.css';
+import React from "react";
+import PropTypes from "prop-types";
+import style from "./UserProfile.module.css";
 
 const Profile = ({ user }) => {
   return (
@@ -38,8 +38,8 @@ Profile.propTypes = {
     stats: PropTypes.shape({
       followers: PropTypes.number.isRequired,
       views: PropTypes.number.isRequired,
-      likes: PropTypes.number.isRequired,
-    }).isRequired,
-  }).isRequired,
+      likes: PropTypes.number.isRequired
+    }).isRequired
+  }).isRequired
 };
 export default Profile;

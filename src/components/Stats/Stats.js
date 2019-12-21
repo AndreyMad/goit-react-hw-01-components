@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import style from './Stats.module.css';
+import React from "react";
+import PropTypes from "prop-types";
+import style from "./Stats.module.css";
 
 const randomColorMaker = () => {
   const r = Math.floor(Math.random() * (256 - 0));
@@ -21,7 +21,7 @@ const Stats = ({ title, stats }) => {
             className={style.item}
             style={{
               width: `${item.percentage}%`,
-              backgroundColor: `rgb(${randomColorMaker()})`,
+              backgroundColor: `rgb(${randomColorMaker()})`
             }}
           >
             <span className={style.label}>{item.label}</span>
@@ -38,8 +38,8 @@ Stats.propTypes = {
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       label: PropTypes.string.isRequired,
-      percentage: PropTypes.number.isRequired,
-    }),
-  ).isRequired,
+      percentage: PropTypes.number.isRequired
+    })
+  ).isRequired
 };
 export default Stats;
