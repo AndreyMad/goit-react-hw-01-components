@@ -5,13 +5,16 @@ import UserFriends from './UserFriends/UserFriends';
 import friends from '../db/friends.json';
 import Stats from './Stats/Stats';
 import statisticalData from '../db/statistical-data.json';
+import transactionHistory from '../db/transaction-history.json';
+import Transactions from './Transactions/Transactions';
 
 function App() {
   return (
     <>
       <UserProfile user={user} />
       <UserFriends friends={friends} />
-      <Stats title Stats={statisticalData} />
+      <Stats title stats={statisticalData} />
+      <Transactions transactionHistory={transactionHistory} />
     </>
   );
 }
